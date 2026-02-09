@@ -154,6 +154,13 @@ STATICFILES_DIRS=[
 ]
 
 
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Keep your existing STATIC_URL
+STATIC_URL = 'static/'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -168,4 +175,4 @@ EMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD')
 FRONTEND_URL='http://127.0.0.1:8000'
 
 LOGIN_URL='sign-in'
-print("DATABASE_URL =", os.environ.get("DATABASE_URL"))
+# print("DATABASE_URL =", os.environ.get("DATABASE_URL"))
