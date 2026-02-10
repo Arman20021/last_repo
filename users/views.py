@@ -57,9 +57,9 @@ Thank you
                 send_mail(
                     subject,
                     message,
-                    settings.DEFAULT_FROM_EMAIL,
+                    settings.EMAIL_HOST_USER,
                     [user.email],
-                    fail_silently=True,  # 🔑 CRITICAL
+                    fail_silently=False,  # 🔑 CRITICAL
                 )
             except Exception as e:
                 print("Email failed:", e)
